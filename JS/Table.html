@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="mytable" border="1"><tr>
+        <td>Zap</td>
+        <td>zap1</td>
+        <td>zap2</td>
+    </tr>
+    <tr>
+        <td>zap3</td>
+        <td>zap4</td>
+        <td>zap5</td>
+    </tr>
+</table>
+    <br><br><br>
+    <button onclick="create()">Add</button>
+    <button onclick="del()">Del</button>
+</body>
+<script>
+    create = () =>{
+        var table = document.getElementById("mytable");
+        var row = table.insertRow(0);
+        var row1 = table.insertRow(1);
+        var cell = row.insertCell(0);
+        var cell1 = row.insertCell(1);
+        var cell2 = row.insertCell(2);
+        var cell3 = row1.insertCell(0);
+        cell.innerHTML = "zap";
+        cell1.innerHTML = "zap1";
+        cell2.innerHTML = "zap2";
+        cell3.innerHTML = "zap69";
+    }
+
+    del = () => {
+     document.getElementById("mytable").deleteRow(0);
+    }
+</script>
+</html>
